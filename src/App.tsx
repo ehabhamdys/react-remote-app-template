@@ -6,7 +6,7 @@ function App() {
   return (
     // TODO BrowserRouter provider must be added to this component
     <BrowserRouter>
-      <GlobalApp />
+      <GlobalApp appPath='/' />
     </BrowserRouter>
   );
 }
