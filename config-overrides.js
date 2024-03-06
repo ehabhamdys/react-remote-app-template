@@ -5,8 +5,8 @@ const fs = require('fs');
 const { override, addWebpackPlugin } = require('customize-cra');
 
 const publicPathPlugin = (config) => {
-  // TODO: Set the public path to the correct value
-  config.output.publicPath = '/';
+  // TODO: Public path could be the full URL of the app in production
+  config.output.publicPath = 'auto';
   return config;
 };
 
