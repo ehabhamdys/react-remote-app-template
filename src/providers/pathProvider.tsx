@@ -6,14 +6,14 @@ type AppPathContextState = {
 };
 
 const contextDefaultValues: AppPathContextState = {
-  appPath: '/',
+  appPath: '',
   setAppPath: () => void 0
 };
 
 const AppPathContext = createContext(contextDefaultValues);
 
 export function PathProvider({ path, children }: { path: string; children: React.ReactNode }) {
-  const [appPath, setAppPath] = useState(path || '/');
+  const [appPath, setAppPath] = useState(path || '');
 
   return <AppPathContext.Provider value={{ appPath, setAppPath }}>{children}</AppPathContext.Provider>;
 }
